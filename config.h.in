@@ -1,0 +1,2 @@
+#define cpp_oop_VERSION_MAJOR @cpp_oop_VERSION_MAJOR@
+#define cpp_oop_VERSION_MINOR @cpp_oop_VERSION_MINOR@
