@@ -1,9 +1,10 @@
-#include <iostream>
+/*   */
+
+#include "main.hpp"
 
 
 int main() {
 
-
-    std::cout << "\n #OOP(10:01:44): The End ..." << std::endl;
-    return (EXIT_SUCCESS);
+    out << "\n #(00:00:00): The End ..." << end;
+    return EXIT_SUCCESS;
 }
