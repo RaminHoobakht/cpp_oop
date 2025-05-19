@@ -1,2 +1,13 @@
-#define cpp_oop_VERSION_MAJOR @cpp_oop_VERSION_MAJOR@
-#define cpp_oop_VERSION_MINOR @cpp_oop_VERSION_MINOR@
+#pragma once
+
+// Project metadata
+#define PROJECT_NAME       "@PROJECT_NAME@"
+#define PROJECT_VERSION    "@PROJECT_VERSION@"
+#define PROJECT_VERSION_MAJOR @PROJECT_VERSION_MAJOR@
+#define PROJECT_VERSION_MINOR @PROJECT_VERSION_MINOR@
+#define PROJECT_DESCRIPTION "@PROJECT_DESCRIPTION@"
+
+// Optional feature flags
+#cmakedefine01 USE_POCO
+#cmakedefine01 USE_PGSQL
+#cmakedefine01 USE_PYTHON
