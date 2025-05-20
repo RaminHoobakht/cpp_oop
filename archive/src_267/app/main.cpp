@@ -1,4 +1,4 @@
-/* static constants */
+/* Subject: using incomplete type style */
 
 #include "main.hpp"
 
