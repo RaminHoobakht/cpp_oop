@@ -6,6 +6,3 @@ namespace cpp {
 
 
 } // namespace cpp
-
-
-
