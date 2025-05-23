@@ -7,10 +7,6 @@
 
 
 /* declaration */
-namespace cpp {
-
-
-
-} // namespace cpp
+namespace cpp {} // namespace cpp
 
 #endif /* HEADER_TEST_MODULE_HPP */

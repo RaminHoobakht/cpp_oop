@@ -2,7 +2,4 @@
 
 
 /* definition */
-namespace cpp {
-
-
-} // namespace cpp
+namespace cpp {} // namespace cpp
