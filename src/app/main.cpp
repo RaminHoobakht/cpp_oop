@@ -1,8 +1,7 @@
 /* Subject:  */
 
 #include "main.hpp"
-#include "raphael.hpp"
-#include "samuel.hpp"
+#include "constant.hpp"
 
 
 /* ------------------------------ */
@@ -10,18 +9,11 @@
 int main() {
     /* code */
 
-    dennis_ritchie::raphael my_raphael{};
-    dennis_ritchie::samuel my_samuel{};
+    extern int global_x;
 
-    my_samuel.print_name();
-    SEP;
 
-    my_raphael.set_samuel(&my_samuel);
-    my_raphael.print_name();
-    SEP;
+    pout << "value of global_x variable is: " << global_x << NL;
 
-    pout << "\n #(18:48:30): The End ..." << eln;
+    pout << "\n #(22:08:30): The End ..." << eln;
     return EXIT_SUCCESS;
 }
-
-//(22:08:30)
