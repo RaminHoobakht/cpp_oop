@@ -53,5 +53,3 @@ int raphael::get_add() noexcept {
     samuel my_samuel{};
     return my_samuel.add(x_, y_);
 }
-
-//(05:29:17)
