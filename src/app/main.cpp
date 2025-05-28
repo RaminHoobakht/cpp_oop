@@ -1,30 +1,45 @@
 /*
  * Subject: using nested class
  *
- *  - When the inner class is private, its object cann't be created
- *    from the outside. like in main function.
- *  - Outer doesn't have access to private section of inner.
- *  - Inner have access to private section of outer.
- *  - Inner can directly accecc static member of outers, but cann't
- *    access member variable, without gooing through an object.
- *
- *
  * */
 
 #include "main.hpp"
 
+namespace albert {
+
+    int add(int a, int b) noexcept;
+    int subtract(int a, int b) noexcept;
+
+} // namespace albert
+
+/* ----------------------------------- */
+/* ----------------------------------- */
+
 int main() {
     /* code */
 
+    int result_add{albert::add(121, 122)};
+    int result_subtract{albert::subtract(321, 960)};
 
-    // outer my_outer{120, 32.56};
-    outer::inner inner_one{10.23};
+    pout << "value of result add: " << result_add << NL;
+    pout << "value of result subtract: " << result_subtract << NL;
 
-    auto result{inner_one.get_double()};
-    pout << "value of result is: " << result << NL;
-
-    pout << "\n #(07:08:17): The End ..." << eln;
+    pout << "\n #(01:34:52): The End ..." << eln;
     return EXIT_SUCCESS;
 }
 
-//(01:34:52)
+/* ----------------------------------- */
+/* ----------------------------------- */
+
+namespace albert {
+
+    int add(int a, int b) noexcept {
+        /* code */
+        return a + b;
+    }
+
+    int subtract(int a, int b) noexcept {
+        /* code */
+        return a - b;
+    }
+} // namespace albert
