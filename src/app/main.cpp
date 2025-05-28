@@ -1,47 +1,55 @@
 /*
- * Subject: using nested class
+ * Subject: using namespace
  *
  * */
 
 #include "main.hpp"
 
-namespace albert {
+int add(int a, int b) noexcept;
 
+namespace dennis_ritchie {
     int add(int a, int b) noexcept;
-    int subtract(int a, int b) noexcept;
+    int calc_one(int a, int b) noexcept;
+    int calc_two(int a, int b) noexcept;
 
-} // namespace albert
+} // namespace dennis_ritchie
 
-/* ----------------------------------- */
-/* ----------------------------------- */
 
 int main() {
     /* code */
 
-    int result_add{albert::add(121, 122)};
-    int result_subtract{albert::subtract(321, 960)};
+    int result_one{dennis_ritchie::calc_one(35, 63)};
+    int result_two{dennis_ritchie::calc_two(35, 63)};
 
-    pout << "value of result add: " << result_add << NL;
-    pout << "value of result subtract: " << result_subtract << NL;
+    pout << "result one is: " << result_one << NL;
+    pout << "result two is: " << result_two << NL;
 
-    pout << "\n #(01:34:52): The End ..." << eln;
+    pout << "\n #(05:22:18): The End ..." << eln;
     return EXIT_SUCCESS;
 }
 
-/* ----------------------------------- */
-/* ----------------------------------- */
+int add(int a, int b) noexcept {
+    /* code */
+    pout << "Ken Thompson ..." << NL;
+    return (a + b) * 10;
+}
 
-namespace albert {
+
+namespace dennis_ritchie {
 
     int add(int a, int b) noexcept {
         /* code */
+        pout << "Dennis Ritchie ..." << NL;
         return a + b;
     }
 
-    int subtract(int a, int b) noexcept {
-        /* code */
-        return a - b;
+    int calc_one(int a, int b) noexcept {
+        int result{add(a, b)};
+        return result * 5;
     }
-} // namespace albert
 
-//(05:22:18)
+    int calc_two(int a, int b) noexcept {
+        int result{::add(a, b)};
+        return result;
+    }
+} // namespace dennis_ritchie
