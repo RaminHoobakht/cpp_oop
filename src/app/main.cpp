@@ -5,53 +5,26 @@
 
 #include "main.hpp"
 
-int add(int a, int b) noexcept;
+namespace one {
+    namespace two {
+        namespace three {
+            void print_message() noexcept;
 
-namespace dennis_ritchie {
-    int add(int a, int b) noexcept;
-    int calc_one(int a, int b) noexcept;
-    int calc_two(int a, int b) noexcept;
-
-} // namespace dennis_ritchie
+            [[maybe_unused]] void print_message() noexcept {
+                pout << "Using namespace aliases ..." << NL;
+            }
+        } // namespace three
+    } // namespace two
+} // namespace one
 
 
 int main() {
     /* code */
 
-    int result_one{dennis_ritchie::calc_one(35, 63)};
-    int result_two{dennis_ritchie::calc_two(35, 63)};
+    namespace np = one::two::three;
 
-    pout << "result one is: " << result_one << NL;
-    pout << "result two is: " << result_two << NL;
+    np::print_message();
 
-    pout << "\n #(05:22:18): The End ..." << eln;
+    pout << "\n #(07:32:57): The End ..." << eln;
     return EXIT_SUCCESS;
 }
-
-int add(int a, int b) noexcept {
-    /* code */
-    pout << "Ken Thompson ..." << NL;
-    return (a + b) * 10;
-}
-
-
-namespace dennis_ritchie {
-
-    int add(int a, int b) noexcept {
-        /* code */
-        pout << "Dennis Ritchie ..." << NL;
-        return a + b;
-    }
-
-    int calc_one(int a, int b) noexcept {
-        int result{add(a, b)};
-        return result * 5;
-    }
-
-    int calc_two(int a, int b) noexcept {
-        int result{::add(a, b)};
-        return result;
-    }
-} // namespace dennis_ritchie
-
-//(07:32:57)
