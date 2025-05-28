@@ -53,5 +53,3 @@ namespace dennis_ritchie {
         return result;
     }
 } // namespace dennis_ritchie
-
-//(07:32:57)
