@@ -43,5 +43,3 @@ namespace albert {
         return a - b;
     }
 } // namespace albert
-
-//(05:22:18)
